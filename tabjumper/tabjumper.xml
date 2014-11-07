@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="tabjumper.widget.tabjumper" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+	<name>Tab Jumper</name>
+	<description>Tab Jumper.</description>
+
+	<icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA7wAOAA6+4et8AAAACXBIWXMAAAG7AAABuwE67OPiAAAAB3RJTUUH3gIHDy8NZAa/ywAAAVdJREFUOMu9k7FqAkEQhr+R2xy6cCgIsUsTGwNiY5EqVSAEAyGSN0iZMo+S10iTFLFNWrnmwE4ErRSFwIZw3iFsCtF45rxY5S9nZr+d+XdHrLWkSUTyQBMob6VmQNdaGwI47FZzPB6/uK7rbQajKDKVSuUKeAdwROQYqKcADl3X9bTWfJV/mnCHQ2+zKweoh2H4FEXRL8J8PkdrjZ7NAJago6NEjQMQxzGFQmHbA7TW/CUBbowxT/l8PrUgDEN832c6nQJwfncHQMmYM6DrAORyuZ03+L5PrVbjoFpNxD887209gogwGAwIguAXYDKZ0Gg06PQeuTi5T+RKxrTXgCAIaLVa7DITSEBkNIJicdmBUorFYkEcx7x+Pmea1uk9AnApsn6FQCnVBk6NMQ/sqZVvjrW2D/RFJNPMlK++BKUF/xWQWCalFNfl270AjrM8Kqt1zliqLAXfTGtwCelLETIAAAAASUVORK5CYII=</icon>
+
+	<properties>
+		<property key="tabclass" type="string" required="true">
+			<caption>Tab class</caption>
+			<category>Behavior</category>
+			<description>The class assigned to the tab container on which this widget should act.</description>
+		</property>
+		<property key="jumpTo" type="enumeration" required="true" defaultValue="Next">
+            <caption>Jump to</caption>
+            <category>Behavior</category>
+            <description>Select the jump action destination.</description>
+            <enumerationValues>
+            	<enumerationValue key="First">First Tab</enumerationValue>
+                <enumerationValue key="Previous">Previous Tab</enumerationValue>
+                <enumerationValue key="Next">Next Tab</enumerationValue>
+                <enumerationValue key="Last">Last Tab</enumerationValue>
+                <enumerationValue key="Titled">Tab title</enumerationValue>
+                <enumerationValue key="Numbered">Tab number</enumerationValue>
+            </enumerationValues>    
+        </property>
+        <property key="tabName" type="string" required="false" defaultValue="">
+			<caption>Tab Title</caption>
+			<category>Behavior</category>
+			<description>The title of the tab to activate. (required when Jump to = Tab title)</description>
+		</property>
+        <property key="tabNumber" type="integer" defaultValue="0">
+			<caption>Tab Number</caption>
+			<category>Behavior</category>
+			<description>The number of the the tab to activate. (required when Jump To = Tab number)</description>
+		</property>
+		<property key="btnTitle" type="translatableString">
+			<caption>Button title</caption>
+			<category>Appearance</category>
+			<description>The title.</description>
+		</property>
+		<property key="showAsButton" type="enumeration" required="true" defaultValue="button">
+            <caption>Render as</caption>
+            <category>Appearance</category>
+            <description>Show as a string or as a button.</description>
+            <enumerationValues>
+                <enumerationValue key="button">Button</enumerationValue>
+                <enumerationValue key="link">Link</enumerationValue>
+            </enumerationValues>    
+        </property>
+		<property key="btnIcon" type="image" required="false">
+            <caption>Image</caption>
+            <category>Appearance</category>
+            <description>The button image.</description>  
+        </property>
+	</properties>
+</widget>
